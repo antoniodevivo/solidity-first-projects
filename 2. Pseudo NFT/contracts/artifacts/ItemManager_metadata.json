@@ -1,0 +1,188 @@
+{
+	"compiler": {
+		"version": "0.6.1+commit.e6f7d5a4"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_itemIndex",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_step",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_itemAddress",
+						"type": "address"
+					}
+				],
+				"name": "SupplyChainStep",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "_owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_identifier",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_priceInWei",
+						"type": "uint256"
+					}
+				],
+				"name": "createItem",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isOwner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "items",
+				"outputs": [
+					{
+						"internalType": "contract Item",
+						"name": "_item",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_identifier",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_priceInWei",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum ItemManager.SupplyChainSteps",
+						"name": "_step",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_itemIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "triggerDelivery",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_itemIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "triggerPayment",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"isOwner()": {
+					"details": "Returns true if the caller is the current owner."
+				}
+			}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"truffle/contracts/ItemManager.sol": "ItemManager"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"truffle/contracts/Item.sol": {
+			"keccak256": "0xd7e6d684c2b3d97d21224cb28e08e564951950b80c8ffbda6ec1872a6e2be4ab",
+			"urls": [
+				"bzz-raw://3465eed06c6d36a2effa46792913b12cfcd7980e95db4f6c6e139060e4c869b1",
+				"dweb:/ipfs/QmUzitwnocrNSNvsCnnUkZ95JXSUtbVg9wb7YviF6Z2Gi9"
+			]
+		},
+		"truffle/contracts/ItemManager.sol": {
+			"keccak256": "0xb16fa7ae566d2b4fb9f078f660e20ba37fbcec75611c0b41cfc2eb57b8a252da",
+			"urls": [
+				"bzz-raw://4262371429220082320a4039676daf3e50cc84007dbba18312967c995e05dceb",
+				"dweb:/ipfs/QmZMEZ2wSmjcqCnbY6tgr2GbCnFjzosrwhoQgu47nZD3QF"
+			]
+		},
+		"truffle/contracts/Ownable.sol": {
+			"keccak256": "0x6858326e598189f6e1f22a85d1cf362f94e93fa85c9877303d23412e4427e1b1",
+			"urls": [
+				"bzz-raw://4335b004e76a8e22141b50bb96f926d204284bbc6dfa635da18c54005d409ce1",
+				"dweb:/ipfs/QmQHTBocoEREbM4Kn9RUEPaK8Y8NBzE62YeQGgkLrCcySf"
+			]
+		}
+	},
+	"version": 1
+}
